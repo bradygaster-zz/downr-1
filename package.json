@@ -1,0 +1,26 @@
+{
+  "name": "async-nodejs",
+  "version": "1.0.0",
+  "description": "Simply async/await node.js web application using [koa](http://koajs.com/)",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^7.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csyntaxlab/async-nodejs.git"
+  },
+  "author": "Ivan Ivanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csyntaxlab/async-nodejs/issues"
+  },
+  "homepage": "https://github.com/csyntaxlab/async-nodejs#readme"
+}
