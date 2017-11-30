@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Simply async/await node.js web application using [koa](http://koajs.com/)",
   "main": "index.js",
+  "engines": {
+    "node": "9.1.0"
+  },
   "dependencies": {
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
