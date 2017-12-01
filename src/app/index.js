@@ -3,7 +3,21 @@ const Router = require("koa-router");
 const bodyParser = require("koa-bodyparser");
 const morgan = require("koa-morgan");
 
-module.exports = (port) => {
+const fs = require("fs");
+
+const getPosts = async(postsDir) => {
+   return new Promise(resolve => {
+        fs.readdir(postsDir, async(err, data) => {
+            if (err) {
+                throw err;
+            }
+            
+            resolve(data);     
+       });
+   });
+};
+
+module.exports = (port, postsDir) => {
     const app = new Koa();
     const router = new Router();
 
@@ -25,7 +39,9 @@ module.exports = (port) => {
     
     router
         .get("/", async(ctx, next) => { 
-            ctx.body = Date.now();
+            let posts = await getPosts(postsDir);
+
+            ctx.body = posts;
             ctx.status = 200;
 
             await next();
