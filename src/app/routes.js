@@ -1,9 +1,9 @@
-const postsService = require("../services/posts");
+const postService = require("../services/posts");
 
 module.exports = router => {
     router
         .get("/", async(ctx, next) => { 
-            const posts = await postsService();
+            const posts = await postService();
 
             ctx.body = posts;
             ctx.status = 200;

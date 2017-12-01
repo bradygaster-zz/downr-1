@@ -3,7 +3,7 @@ const Router = require("koa-router");
 const bodyParser = require("koa-bodyparser");
 const morgan = require("koa-morgan");
 
-module.exports = (port, postsDir) => {
+module.exports = port => {
     const app = new Koa();
     const router = new Router(); 
     
