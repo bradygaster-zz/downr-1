@@ -7,6 +7,7 @@
     "node": "9.1.0"
   },
   "dependencies": {
+    "gray-matter": "^3.1.1",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
     "koa-morgan": "^1.0.1",

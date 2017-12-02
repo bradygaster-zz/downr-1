@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const matter = require("gray-matter");
 
 const POSTS_DIR = path.join(__dirname, "..", "..", "posts");
 
@@ -11,7 +12,7 @@ const readFile = function async(filename) {
                     reject(err); 
                 }
                 
-                resolve(file);
+                resolve(matter(file));
             });
         } catch (err) {
             reject(err);
