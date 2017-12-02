@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- 9.1.0
+sudo: false
+cache:
+  directories:
+  - /home/travis/.local
+  - node_modules
+  - $(npm config get cache)
+install:
+- npm install
+script:
+- NODE_ENV=production node src/server
