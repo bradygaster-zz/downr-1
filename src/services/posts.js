@@ -24,16 +24,20 @@ module.exports = async() => {
     return new Promise((resolve, reject) => {
         let files = [];
 
-        fs.readdir(POSTS_DIR, async(err, data) => {
-            if (err) {
-                reject(err);
-            }
+        try {
+            fs.readdir(POSTS_DIR, async(err, data) => {
+                if (err) {
+                    reject(err);
+                }
 
-            for (let folder of data) {
-                files.push(await readFile(path.join(POSTS_DIR, folder, "index.md")));
-            }
+                for (let folder of data) {
+                    files.push(await readFile(path.join(POSTS_DIR, folder, "index.md")));
+                }
 
-            resolve(files);            
-        });
+                resolve(files);            
+            });
+        } catch (err) {
+            reject(err);
+        }
    });
 };
