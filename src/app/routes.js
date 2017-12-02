@@ -2,11 +2,10 @@ const postService = require("../services/posts");
 
 module.exports = router => {
     router
-        .get("/", async(ctx) => { 
+        .get("/", async(ctx) => {
+        	const title = "Home";
             const posts = await postService();
 
-            console.log(posts);
-
-            await ctx.render("index", { posts });
+            await ctx.render("index", { posts, title });
         });
 };

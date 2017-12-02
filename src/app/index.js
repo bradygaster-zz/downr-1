@@ -11,10 +11,8 @@ module.exports = port => {
 
     render(app, {
         root: path.join(__dirname, "..", "views"),
-        //layout: 'template',
-        viewExt: 'html',
-        cache: false,
-        debug: true
+        viewExt: "html",
+        cache: false
     });
 
     require("./routes")(router);

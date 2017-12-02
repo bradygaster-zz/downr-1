@@ -1,9 +1,12 @@
 <ul>
-  <% for(let post of posts) {%>
-    <li>
-      <a href="<%= post.data.slug %>">
-        <%= post.data.title %> - <%= post.data.date %>
-      </a>
-    </li>
-  <% }%>
+	<% for (let post of posts) { %>
+		<li>
+			<a href="<%= post.slug %>">
+				<%= post.title %> - <%= post.date %>
+			</a>
+			<p>
+				<%- post.content %>
+			</p>
+		</li>
+	<% } %>
 </ul>
