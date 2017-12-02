@@ -9,6 +9,7 @@ module.exports = port => {
     
     require("./routes")(router);
 
+    app.use(morgan("combined"));
     app.use(bodyParser());
     app.use(router.routes());
     app.use(router.allowedMethods());
