@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{{title}}</title>
-</head>
-<body>
-  <p>{{content}}</p>
-</body>
-</html>
+<ul>
+  <% for(let post of posts) {%>
+    <li>
+      <a href="<%= post.data.slug %>">
+        <%= post.data.title %> - <%= post.data.date %>
+      </a>
+    </li>
+  <% }%>
+</ul>

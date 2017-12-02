@@ -22,7 +22,7 @@ const readFile = async(filename) => {
 };*/
 
 function readFile(file) {
-    return fs.readFileSync(file, "utf-8");
+    return matter(fs.readFileSync(file, "utf-8"));
 }
 
 module.exports = async() => {
