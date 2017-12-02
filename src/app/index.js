@@ -1,9 +1,10 @@
 const path = require("path");
 const Koa = require("koa");
 const Router = require("koa-router");
+const static = require("koa-static");
 const render = require("koa-ejs");
-const bodyParser = require("koa-bodyparser");
 const morgan = require("koa-morgan");
+const bodyParser = require("koa-bodyparser");
 
 module.exports = port => {
     const app = new Koa();
@@ -21,6 +22,8 @@ module.exports = port => {
     app.use(bodyParser());
     app.use(router.routes());
     app.use(router.allowedMethods());
+
+    app.use(static(path.join(__dirname, "..", "..", "public")));
 
     return new Promise(resolve =>  app.listen(port, resolve));
 }
