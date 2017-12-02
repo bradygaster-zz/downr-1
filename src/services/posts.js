@@ -31,7 +31,7 @@ module.exports = async() => {
                 }
 
                 for (let folder of data) {
-                    files.push(await readFile(path.join(POSTS_DIR, folder, "index.md")));
+                    files.push(readFile(path.join(POSTS_DIR, folder, "index.md")));
                 }
 
                 resolve(files);            
