@@ -4,7 +4,7 @@ const matter = require("gray-matter");
 
 const POSTS_DIR = path.join(__dirname, "..", "..", "posts");
 
-const readFile = async(filename) => {
+const readFile = filename => {
     return new Promise((resolve, reject) => {
         try {
             fs.readFile(filename, "utf-8", (err, file) => {
