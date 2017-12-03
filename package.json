@@ -4,7 +4,7 @@
   "description": "TODO",
   "main": "server.js",
   "scripts": {
-    "postinstall": "node ./node_modules/bower/bin/bower install"
+    "postinstall": "sass -v"
   },
   "engines": {
     "node": "9.1.0"
@@ -12,7 +12,6 @@
   "author": "Ivan Ivanov",
   "license": "MIT",
   "dependencies": {
-    "bower": "^1.8.2",
     "gray-matter": "^3.1.1",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
