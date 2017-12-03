@@ -45,7 +45,8 @@ a {
 
 .articles li {
     border-bottom: 1px solid hsla(0,0%,97%,.1);
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: .5em 0;
     padding: 1.2em 1em;
 }
@@ -91,4 +92,47 @@ a {
 .articles a:hover,
 .articles a:focus {
     color: rgb(2, 190, 196);
+}
+
+.article > header {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 2.4em 0 2.3em;
+    text-align: center;
+}
+
+.article time {
+    font-weight: 700;
+    line-height: 1.1;
+    display: block;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.article h1 {
+    font-weight: 700;
+    line-height: 1.1;
+    color: #f8f8f8;
+    font-size: 3.2em;
+    font-weight: 900;
+    margin: 0 auto;
+    max-width: 95%;
+}
+
+@media (min-width: 620px) {
+    .article h1 {
+        font-size: 5.5vw;
+    }
+}
+
+.article .content {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 850px;
+    width: 93%;
+}
+
+.article .content pre {
+    font-size: 0.75rem;
 }

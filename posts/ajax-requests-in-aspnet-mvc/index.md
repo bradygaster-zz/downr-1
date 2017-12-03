@@ -8,7 +8,7 @@ date: 15-06-2017
 където *ActionResult*-те да се изпълняват само при Ajax заявки. 
 Решението на проблема реших да го споделя и може да го намерите по долу.
 
-```c#
+```csharp
 public class AjaxOnlyAttribute : ActionMethodSelectorAttribute
 {
     public override bool IsValidForRequest(ControllerContext controllerContext, MethodInfo methodInfo)
