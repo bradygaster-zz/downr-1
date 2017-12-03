@@ -11,14 +11,14 @@ function readFile(file) {
 
     file = matter(fs.readFileSync(file, "utf-8"));
 
-    const reverse = {
+    file = {
         title: file.data.title,
         slug: file.data.slug,
         date: moment(file.data.date, "DD-MM-YYYY").format("DD MMMM YYYY"),
         content: converter.makeHtml(file.content)
     };
 
-    return reverse;
+    return file;
 }
 
 module.exports = async() => {

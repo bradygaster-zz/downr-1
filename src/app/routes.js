@@ -13,7 +13,6 @@ module.exports = router => {
 
         	for (let post of posts) {
         		if (post.slug == ctx.params.slug) {
-
         			await ctx.render("post", { post, title: post.title});
         		} else {
         			ctx.status = 404;
