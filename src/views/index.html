@@ -1,9 +1,8 @@
-<ul>
+<ul class="articles">
 	<% for (let post of posts) { %>
 		<li>
-			<a href="/<%= post.slug %>">
-				<%= post.title %> - <%= post.date %>
-			</a>
+			<time datetime="<%= post.date %>"><%= post.date %></time>
+			<a href="/<%= post.slug %>"><%= post.title %></a>
 		</li>
 	<% } %>
 </ul>

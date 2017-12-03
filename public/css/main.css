@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body:before {
+    display: block;
+    content: "";
+    line-height: 0%; 
+    width: 0px;
+    border-top: 55px solid rgb(25, 52, 65);
+    border-right: 55px solid rgb(203, 219, 215);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(30, 30, 29);
+    background: rgb(203, 219, 215);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.articles {
+    margin: 0 auto;
+    padding-top: .5em;
+}
+
+@media (min-width: 650px) {
+    .articles {
+        -ms-flex-item-align: center;
+        align-self: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.articles li {
+    border-bottom: 1px solid hsla(0,0%,97%,.1);
+    box-sizing: border-box;
+    margin: .5em 0;
+    padding: 1.2em 1em;
+}
+
+@media (min-width: 650px) {
+    .articles li {
+        border-bottom: 0;
+        margin: .5em 1%;
+        padding: 1em;
+        width: 48%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .articles li {
+        width: 31.33%;
+    }
+}
+
+.articles time,
+.article time {
+    display: block;
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+    font-family: 'Coming Soon', cursive;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: rgb(107, 75, 160);    
+}
+
+.articles a {
+    display: inline-block;
+    max-width: 100%;
+    font-weight: 700;
+    font-size: 2.15em;
+    line-height: 1.1;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    word-wrap: break-word;
+    color: rgb(2, 132, 168);
+}
+
+.articles a:hover,
+.articles a:focus {
+    color: rgb(2, 190, 196);
+}
