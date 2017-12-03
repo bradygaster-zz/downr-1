@@ -1,7 +1,7 @@
 ---
 title: Подържане на изчистен Startup в ASP.NET Core
 slug: support-cleany-startup-in-aspnetcore
-date: 16-06-2017
+date: 16-07-2017
 ---
 
 Когато използваме *ConfigureServices* за да конфигурираме нашето приложение e 
