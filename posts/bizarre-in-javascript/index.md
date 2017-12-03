@@ -26,6 +26,7 @@ null instaceof Object; // return false
 
 Така, че null е обект, но също и не е обект.
 
+
 ## Undefined е defined
 
 Колкото и да е странно за undefined, макар и да е ключова дума в JavaScript, 

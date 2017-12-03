@@ -1,6 +1,5 @@
 ---
 title: Ajax заявки в ASP.NET MVC
-slug: ajax-requests-in-aspnet-mvc
 date: 15-06-2017
 ---
 
@@ -8,7 +7,7 @@ date: 15-06-2017
 където *ActionResult*-те да се изпълняват само при Ajax заявки. 
 Решението на проблема реших да го споделя и може да го намерите по долу.
 
-```csharp
+```c#
 public class AjaxOnlyAttribute : ActionMethodSelectorAttribute
 {
     public override bool IsValidForRequest(ControllerContext controllerContext, MethodInfo methodInfo)
