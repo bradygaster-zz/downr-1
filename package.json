@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "TODO",
   "main": "server.js",
-  "scripts": {
-    "postinstall": "sass -v"
-  },
   "engines": {
     "node": "9.1.0"
   },
