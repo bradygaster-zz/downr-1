@@ -1,5 +1,5 @@
 {
-  "name": "async-nodejs-todo",
+  "name": "nodejs-app",
   "version": "1.0.0",
   "description": "TODO",
   "main": "server.js",
@@ -12,6 +12,7 @@
     "gray-matter": "^3.1.1",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
+    "koa-compress": "^2.0.0",
     "koa-ejs": "^4.1.0",
     "koa-morgan": "^1.0.1",
     "koa-router": "^7.3.0",

@@ -1,6 +1,7 @@
 const path = require("path");
 const Koa = require("koa");
 const Router = require("koa-router");
+const compress = require("koa-compress");
 const static = require("koa-static");
 const render = require("koa-ejs");
 const morgan = require("koa-morgan");
@@ -18,6 +19,7 @@ module.exports = port => {
 
     require("./routes")(router);
     
+    app.use(compress());
     app.use(morgan("combined"));
     app.use(bodyParser());
     app.use(router.routes());
