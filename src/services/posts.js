@@ -52,6 +52,7 @@ module.exports = async() => {
                 }
 
                 for (let folder of data) {
+                    console.log(`folder = slug = ${folder}`);
                     files.push(await readFile(path.join(POSTS_DIR, folder, "index.md")));
                 }
                 
