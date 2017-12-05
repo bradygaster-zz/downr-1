@@ -9,7 +9,27 @@ const POSTS_DIR = path.join(__dirname, "..", "..", "posts");
 function readFile(file) {
     const converter = new showdown.Converter();
 
-    file = matter(fs.readFileSync(file, "utf-8"));
+    return new Promise((resolve, reject) => {
+        fs.readFile(file, "utf-8", async(err, file) => {
+            if (err) {
+                reject(err);
+            }
+
+            file = matter(file);
+
+            file = {
+                title: file.data.title,
+                slug: file.data.slug,
+                date: moment(file.data.date, "DD-MM-YYYY").format("DD MMMM YYYY"),
+                content: converter.makeHtml(file.content)
+            };
+
+            resolve(file);
+        });
+    });
+    
+
+    /*file = matter(fs.readFileSync(file, "utf-8"));
 
     file = {
         title: file.data.title,
@@ -18,29 +38,29 @@ function readFile(file) {
         content: converter.makeHtml(file.content)
     };
 
-    return file;
+    return file;*/
 }
 
 module.exports = async() => {
     return new Promise((resolve, reject) => {
         let files = [];
 
-        try {
+        //try {
             fs.readdir(POSTS_DIR, async(err, data) => {
                 if (err) {
                     reject(err);
                 }
 
                 for (let folder of data) {
-                    files.push(readFile(path.join(POSTS_DIR, folder, "index.md")));
+                    files.push(await readFile(path.join(POSTS_DIR, folder, "index.md")));
                 }
                 
                 files.sort((a, b) =>  new Date(b.date) - new Date(a.date));
 
                 resolve(files);
             });
-        } catch (err) {
+      /*  } catch (err) {
             reject(err);
-        }
+        }*/
    });
 };
