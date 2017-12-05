@@ -41,7 +41,7 @@ function readFile(file) {
     return file;*/
 }
 
-module.exports = async() => {
+module.exports.all = async() => {
     return new Promise((resolve, reject) => {
         let files = [];
 
@@ -65,3 +65,32 @@ module.exports = async() => {
         }*/
    });
 };
+
+module.exports.find = async(slug) => {
+    return new Promise((resolve, reject) => {
+        let file;
+
+        //try {
+            fs.readdir(POSTS_DIR, async(err, data) => {
+                if (err) {
+                    reject(err);
+                }
+
+                for (let folder of data) {
+                    /*console.log(`folder = slug = ${folder}`);
+                    files.push(await readFile(path.join(POSTS_DIR, folder, "index.md")));*/
+
+                    if (slug == folder) {
+                        file = await readFile(path.join(POSTS_DIR, folder, "index.md"));
+                    }
+                }
+                
+                //files.sort((a, b) =>  new Date(b.date) - new Date(a.date));
+
+                resolve(file);
+            });
+      /*  } catch (err) {
+            reject(err);
+        }*/
+   });
+}
