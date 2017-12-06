@@ -4,7 +4,7 @@ const moment = require("moment");
 const showdown  = require("showdown");
 const matter = require("gray-matter");
 
-const POSTS_DIR = path.join(__dirname, "..", "..", "posts");
+const POSTS_DIR = path.join(__dirname, "..", "posts");
 
 function readFile(file) {
     const converter = new showdown.Converter();

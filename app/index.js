@@ -33,7 +33,7 @@ module.exports = async(port) => {
     app.use(router.routes());
     app.use(router.allowedMethods());
 
-    app.use(static(path.join(__dirname, "..", "..", "public")));
+    app.use(static(path.join(__dirname, "..", "public")));
 
     return new Promise(resolve =>  app.listen(port, resolve));
 }

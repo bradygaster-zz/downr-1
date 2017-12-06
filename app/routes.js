@@ -1,4 +1,4 @@
-const postsData = require("../services/posts");
+const postsData = require("../utils/posts");
 
 module.exports = router => {
     router
