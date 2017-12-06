@@ -7,7 +7,7 @@ const render = require("koa-ejs");
 const morgan = require("koa-morgan");
 const bodyParser = require("koa-bodyparser");
 
-module.exports = port => {
+module.exports = async(port) => {
     const app = new Koa();
     const router = new Router();
 
@@ -16,6 +16,14 @@ module.exports = port => {
         viewExt: "html",
         cache: false
     });
+
+    if (process.env.NODE_ENV === "production") {
+        render(app, {
+            root: path.join(__dirname, "..", "views"),
+            viewExt: "html",
+            cache: true
+        });
+    }
 
     require("./routes")(router);
     
