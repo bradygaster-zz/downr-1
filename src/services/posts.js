@@ -80,7 +80,7 @@ module.exports.find = async(slug) => {
                     /*console.log(`folder = slug = ${folder}`);
                     files.push(await readFile(path.join(POSTS_DIR, folder, "index.md")));*/
 
-                    if (slug == folder) {
+                    if (slug === folder) {
                         file = await readFile(path.join(POSTS_DIR, folder, "index.md"));
                     }
                 }
