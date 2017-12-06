@@ -1,9 +1,9 @@
 const path = require("path");
 const Koa = require("koa");
+const render = require("koa-ejs");
 const Router = require("koa-router");
 const compress = require("koa-compress");
 const static = require("koa-static");
-const render = require("koa-ejs");
 const morgan = require("koa-morgan");
 const bodyParser = require("koa-bodyparser");
 

@@ -1,9 +1,9 @@
 const postsData = require("../utils/posts");
 
-module.exports = router => {
+module.exports = async(router) => {
     router
         .get("/", async(ctx) => {
-            ctx.redirect("articles")
+            ctx.redirect("articles");
         })
         .get("/articles", async(ctx) => {
 			const posts = await postsData.all();
@@ -16,5 +16,8 @@ module.exports = router => {
 			const title = post.title;
 
 			await ctx.render("post", { post, title });
+        })
+        .get("/projects", async(ctx) => {
+            ctx.redirect("articles");
         });
 };
