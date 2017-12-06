@@ -1,6 +1,6 @@
 ---
 title: Ajax заявки в ASP.NET MVC
-slug: ajax-request-in-aspnet-mvc
+slug: ajax-requests-in-aspnet-mvc
 date: 15-06-2017
 ---
 
