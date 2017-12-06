@@ -2,23 +2,19 @@ const postsData = require("../services/posts");
 
 module.exports = router => {
     router
-        .get("/", async(ctx, next) => {
-        	const title = "Home";
-            const posts = await postsData.all();
+        .get("/", async(ctx) => {
+            ctx.redirect("articles")
+        })
+        .get("/articles", async(ctx) => {
+			const posts = await postsData.all();
+			const title = "Home";
 
             await ctx.render("index", { posts, title });
         })
-        .get("/:slug", async(ctx, next) => {
+        .get("/articles/:slug", async(ctx) => {
 			const post = await postsData.find(ctx.params.slug);
-			
-			await ctx.render("post", { post, title: post.title});
+			const title = post.title;
 
-        	/*for (let post of posts) {
-        		if (post.slug == ctx.params.slug) {
-        			await ctx.render("post", { post, title: post.title});
-        		} else {
-        			ctx.status = 404;
-        		}
-        	}*/
+			await ctx.render("post", { post, title });
         });
 };

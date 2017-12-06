@@ -2,7 +2,7 @@
 	<% for (let post of posts) { %>
 		<li>
 			<time datetime="<%= post.date %>"><%= post.date %></time>
-			<a href="/<%= post.slug %>"><%= post.title %></a>
+			<a href="/articles/<%= post.slug %>"><%= post.title %></a>
 		</li>
 	<% } %>
 </ul>
