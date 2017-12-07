@@ -7,6 +7,8 @@ const static = require("koa-static");
 const morgan = require("koa-morgan");
 const bodyParser = require("koa-bodyparser");
 
+const sass = require("koa-sass");
+
 module.exports = async(port) => {
     const app = new Koa();
     const router = new Router();
@@ -26,6 +28,12 @@ module.exports = async(port) => {
     }
 
     require("./routes")(router);
+
+    app.use(sass({
+        src:  path.join(__dirname, "..", "sass"),
+        dest: path.join(__dirname, "..", "public"),
+        outputStyle: "compressed"
+    }));
     
     app.use(compress());
     app.use(morgan("combined"));
