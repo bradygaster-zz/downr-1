@@ -7,8 +7,6 @@ const static = require("koa-static");
 const morgan = require("koa-morgan");
 const bodyParser = require("koa-bodyparser");
 
-const sass = require("koa-sass");
-
 module.exports = async(port) => {
     const app = new Koa();
     const router = new Router();
