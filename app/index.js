@@ -26,12 +26,6 @@ module.exports = async(port) => {
     }
 
     require("./routes")(router);
-
-    app.use(sass({
-        src:  path.join(__dirname, "..", "sass"),
-        dest: path.join(__dirname, "..", "public"),
-        outputStyle: "compressed"
-    }));
     
     app.use(compress());
     app.use(morgan("combined"));
