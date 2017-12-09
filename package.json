@@ -6,6 +6,9 @@
   "engines": {
     "node": "9.1.0"
   },
+  "scripts": {
+    "postinstall": "bundle install"
+  },
   "author": "Ivan Ivanov",
   "license": "MIT",
   "dependencies": {
