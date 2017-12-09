@@ -20,10 +20,10 @@ img {
 .header > .logo {
     display: block;
     margin: 0 auto;
-    width: 250px;
+    width: 550px;
     height: 150px;
-    max-width: 100%;
-    background: transparent url("/img/logo.svg");
+    max-width: 95%;
+    background: transparent url("/img/Header.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
