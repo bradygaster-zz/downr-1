@@ -1,0 +1,17 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(30, 30, 29);
+    background: rgb(203, 219, 215);
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    color: rgb(11, 125, 170);
+}
+
+a:hover,
+a:focus {
+    color: rgb(0, 123, 196);
+}

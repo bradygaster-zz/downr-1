@@ -1,0 +1,18 @@
+.footer {
+    border-top: 6px solid rgb(11, 125, 170);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1em auto 2em;
+    max-width: 720px;
+    overflow: hidden;
+    text-align: center;
+    width: 95%;
+}
+
+.footer > a {
+    line-height: 1.1;
+    display: inline-block;
+    font-size: .95rem;
+    font-weight: 700;
+    padding: .55rem;
+}

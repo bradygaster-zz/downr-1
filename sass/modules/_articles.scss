@@ -1,0 +1,66 @@
+.articles {
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+@media (min-width: 650px) {
+    .articles {
+        -ms-flex-item-align: center;
+        align-self: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.articles li {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+    padding: 1.2rem 1rem;
+}
+
+@media (min-width: 650px) {
+    .articles li {
+        border-bottom: 0;
+        margin: 0.5rem 1%;
+        padding: 1rem;
+        width: 48%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .articles li {
+        width: 31.33%;
+    }
+}
+
+.articles time,
+.article time {
+    display: block;
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+    font-family: 'Coming Soon', cursive;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: rgb(107, 75, 160);    
+}
+
+.articles a {
+    display: inline-block;
+    max-width: 100%;
+    font-weight: 700;
+    font-size: 2.15rem;
+    line-height: 1.1;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    word-wrap: break-word;
+    color: rgb(2, 132, 168);
+}
+
+.articles a:hover,
+.articles a:focus {
+    color: rgb(2, 190, 196);
+}

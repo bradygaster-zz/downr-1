@@ -2,12 +2,11 @@ const fs = require("fs");
 const path = require("path");
 const sass = require("node-sass");
 
-console.log("Compiling sass");
-
+const MAIN_SASS_STYLE = path.join(__dirname, "sass", "main.scss");
 const PAGES_DIR_STYLES = path.join(__dirname, "pages", "sass");
 const CSS_STYLES = path.join(__dirname, "public", "css", "styles.css");
 
-let content = "";
+let content = sass.renderSync({ file: MAIN_SASS_STYLE }).css.toString();
 
 fs.readdir(PAGES_DIR_STYLES, function (err, files) {
     if (err) {
@@ -22,21 +21,19 @@ fs.readdir(PAGES_DIR_STYLES, function (err, files) {
         console.log("%s (%s)", file, path.extname(file));
 
         sass.render({
-        	file: file
+            file: file
         }, function(err, result) {
-        	if (err) {
-        		throw err;
-    		}
+            if (err) {
+                throw err;
+            }
 
-    		content += result.css.toString();
+            content += result.css.toString();
 
-    		fs.writeFile(CSS_STYLES, content, function(err) {
-			    if(err) {
-			        return console.log(err);
-			    }
-
-			    console.log("Add pages styles");
-			}); 
+            fs.writeFile(CSS_STYLES, content, function(err) {
+                if (err) {
+                    return console.log(err);
+                }
+            }); 
         });
     });
 });
