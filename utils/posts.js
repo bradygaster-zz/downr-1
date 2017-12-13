@@ -16,8 +16,6 @@ const all = async() => {
                 }
 
                 for (let folder of data) {
-                    console.log(`folder = slug = ${folder}`);
-
                     file = await fileReader.readFile(path.join(POSTS_DIR, folder, "index.md"));
 
                     files.push(file);

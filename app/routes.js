@@ -19,16 +19,9 @@ module.exports = async(router) => {
 			await ctx.render("post", { post, title });
         })
         .get("/pages/:slug", async(ctx, next) => {
-            const all = await pagesData.all();
+            const page = await pagesData.findPage(ctx.params.slug);
+            const title = page.title;
 
-            ctx.type = 'text/plain; charset=utf-8';
-            ctx.body = all;
-
-            await next();
-        })
-        .get("/about", async(ctx) => {
-            const title = "About";
-
-            await ctx.render("about", { title });
+            await ctx.render("page", { page, title });
         });
 };

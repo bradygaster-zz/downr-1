@@ -22,7 +22,7 @@ const readFile = async(file) => {
                 file = {
                     title: file.data.title,
                     slug: file.data.slug,
-                    date: moment(file.data.date, "DD-MM-YYYY").format("DD MMMM YYYY"),
+                    date: file.data.date ? moment(file.data.date, "DD-MM-YYYY").format("DD MMMM YYYY") : null,
                     content: converter.makeHtml(file.content)
                 };
 

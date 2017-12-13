@@ -9,36 +9,15 @@ const converter = new showdown.Converter({
     tables: true
 });
 
+const fileReader = require("./fileReader");
+
 const PAGES_DIR = path.join(__dirname, "..", "pages");
 
-const readFile = async(file) => {
-    return new Promise((resolve, reject) => {
-        try {
-            fs.readFile(file, "utf-8", async(err, file) => {
-                if (err) {
-                    reject(err);
-                }
-
-                file = matter(file);
-
-                file = {
-                    title: file.data.title,
-                    slug: file.data.slug,
-                    content: converter.makeHtml(file.content)
-                };
-
-                resolve(file);
-            });
-        } catch (err) {
-            reject(err);
-        }
-    });
-};
-
-const all = async() => {
+//Todo
+const findPage = async(slug) => {
     return new Promise((resolve, reject) => {
         let files = [];
-
+        let file;
         try {
             fs.readdir(PAGES_DIR, async(err, data) => {
                 if (err) {
@@ -46,10 +25,18 @@ const all = async() => {
                 }
 
                 for (let file of data) {
-                    files.push(await readFile(path.join(PAGES_DIR, file)));                        
+                    file = path.join(PAGES_DIR, file);
+
+                    if (fs.statSync(file).isFile()) {
+                        files.push(await fileReader.readFile(file));
+                    }
                 }
                 
-                resolve(files);
+                for (let file of files) {
+                    if (file.slug === slug) {
+                        resolve(file);
+                    }
+                }
             });
         } catch (err) {
             reject(err);
@@ -57,4 +44,4 @@ const all = async() => {
    });
 };
 
-module.exports.all = all;
+module.exports.findPage = findPage;
