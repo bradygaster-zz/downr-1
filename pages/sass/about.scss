@@ -1,4 +1,7 @@
 /* About page */
+$black: rgb(30, 30, 29);
+$groovy: rgb(51, 51, 51);
+$green: rgb(94,234,139);
 
 .about-me {
     -ms-flex-item-align: center;
@@ -9,75 +12,88 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     overflow: hidden;
-    padding-top: 1.6em;
+    //padding-top: 0.95rem;
     position: relative;
-}
 
-.my-big-dumb-faces {
-    background: transparent url("/img/face.png") no-repeat top;
-    background-size: 97%;
-    box-sizing: border-box;
-    padding-top: 66%;
-    width: 100%;
-}
-
-@media (min-width: 820px) {
     .my-big-dumb-faces {
-        background-size: 95%;
-        background-image: url(/img/man.png);
-        padding-top: 0;
-        width: 40%;
+        background: transparent url("/img/face.png") no-repeat top;
+        background-size: contain;
+        box-sizing: border-box;
+        padding-top: 66%;
+        width: 100%;
     }
-}
 
-.all-about-me {
-    box-sizing: border-box;
-    font-size: 1.2em;
-    margin: 0 auto;
-    line-height: 1.5;
-    padding-top: .8em;
-    width: 93%;
+    .all-about-me {
+        box-sizing: border-box;
+        font-size: 1.2em;
+        margin: 0 auto;
+        line-height: 1.5;
+        padding-top: .8em;
+        width: 93%;
+
+        .number-one {
+            color: $black;
+            font-size: 1.25rem;
+            font-weight: 900;
+            font-style: italic;
+            line-height: 1.35;
+            text-align: center;
+        
+            &:after {
+                display: block;
+                margin: 0.75rem auto;
+                content: "";
+                width: 55%;
+                height: 0.35rem;
+                background: rgb(94,234,139);
+            }
+        }
+        
+        p:not(.number-one) {
+            font-weight: 700;
+            color: $groovy;
+            padding-bottom: 1.35rem;
+        }
+    }
 }
 
 @media (min-width: 570px) {
-    .all-about-me {
-        font-size: 1.4em;
-    }
-}
-
-@media (min-width: 820px) {
-    .all-about-me {
-        padding-right: 4%;
-        padding-left: 2%;
-        padding-bottom: 1.2em;
-        width: 60%;
-    }
-}
-
-.big-talker .number-one {
-    color: #f8f8f8!important;
-    font-size: 1.2em;
-    font-style: italic;
-    line-height: 1.4;
-    margin-top: .3em;
-    text-align: center;
-}
-
-.big-talker p {
-    color: #d3d3d3;
-    padding-bottom: 1.4em;
+    .about-me {
+        .all-about-me {
+            font-size: 1.4em;
+        }
+    }    
 }
 
 @media (min-width: 720px) {
-    .big-talker .number-one, 
-    .skills {
-        font-size: 1.4em;
+    .about-me {
+        .all-about-me {
+            .number-one {
+               font-size: 1.4em;
+           }
+        }
     }
 }
 
 @media (min-width: 820px) {
-    .big-talker .number-one {
-        font-size: 1.3em;
-        text-align: left;
+    .about-me {
+        .my-big-dumb-faces {
+            background-size: 95%;
+            background-image: url("/img/man.png");
+            padding-top: 0;
+            width: 40%;
+        }
+
+        .all-about-me {
+            padding-right: 4%;
+            padding-left: 2%;
+            padding-bottom: 1.2em;
+            width: 60%;
+
+            .number-one {
+                font-size: 1.3em;
+                text-align: left;
+            }
+        }
     }
 }

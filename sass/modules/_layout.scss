@@ -1,7 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background: rgb(94,234,139);
+    color: rgb(255,255,255);
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    background: rgb(221, 254, 238);
     color: rgb(30, 30, 29);
-    background: rgb(203, 219, 215);
 }
 
 a {
@@ -9,9 +24,9 @@ a {
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
     color: rgb(11, 125, 170);
-}
 
-a:hover,
-a:focus {
-    color: rgb(0, 123, 196);
+    &:hover,
+    &:focus {
+        color: rgb(0, 123, 196);
+    }
 }

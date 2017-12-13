@@ -1,6 +1,6 @@
 ---
 title: Projects
-permalink: projects
+slug: projects
 ---
 
-# about me
+# projects

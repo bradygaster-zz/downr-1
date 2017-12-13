@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: about
+slug: about
 ---
 
 # about me
