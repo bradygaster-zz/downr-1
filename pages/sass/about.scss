@@ -1,7 +1,7 @@
-/* About page */
 $black: rgb(30, 30, 29);
 $groovy: rgb(51, 51, 51);
 $green: rgb(94,234,139);
+$blue: rgb(27, 105, 242);
 
 .about-me {
     -ms-flex-item-align: center;
@@ -36,14 +36,15 @@ $green: rgb(94,234,139);
             font-size: 1.25rem;
             font-weight: 900;
             font-style: italic;
-            line-height: 1.35;
+            line-height: 1.5;
             text-align: center;
         
             &:after {
                 display: block;
-                margin: 0.75rem auto;
+                margin: 1.25rem auto;
+                line-height: 1;
                 content: "";
-                width: 55%;
+                width: 25%;
                 height: 0.35rem;
                 background: rgb(94,234,139);
             }
@@ -94,6 +95,82 @@ $green: rgb(94,234,139);
                 font-size: 1.3em;
                 text-align: left;
             }
+        }
+    }
+}
+
+.the-site {
+    /*-ms-flex-item-align: center;
+    align-self: center;*/
+    background-color: hsla(0,0%,40%,.1);
+    border: 1px solid hsla(0,0%,40%,.1);
+   /* box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;*/
+    margin: 1.2em auto 0;
+    padding: 1em 1.2em;
+    width: 95%;
+}
+/*
+.the-site p {
+    color: #d3d3d3;
+    padding-bottom: 1.4em;
+}*/
+
+/*
+This need optimize
+*/
+
+.skills {
+    box-sizing: border-box;
+    color: #d3d3d3;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0 auto;
+    /*width: 93%;*/
+
+    h3 {
+        color: $blue;
+        font-size: 1.75rem;
+        font-weight: 900;
+        padding-bottom: 0.95rem;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            h4 {
+                color: rgb(94, 234, 139);
+                font-size: 1.35rem;
+                padding-bottom: 0.15rem;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 1.15rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 555px) {
+    .skills ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        li {
+            width: 48%;
         }
     }
 }

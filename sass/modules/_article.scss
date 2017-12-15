@@ -1,17 +1,48 @@
+$green: rgb(94,234,139);
+$blue: rgb(13, 94, 229);
 .article {
     header {
         @include border-box();
-        //margin: 2.4em 0 2.3em;
-        margin: 1.5rem 0 2.35rem;
         text-align: center;
+        line-height: 1.5;
+
+        ::selection {
+            background: $blue;
+        }
+
+        h1 {
+            margin: 0 auto;
+            max-width: 95%;
+            font-weight: 900;
+            font-size: 3rem;
+            color: $green;
+            line-height: 1.1;
+        }
+
+        time {
+            display: block;
+            margin: 0.55rem auto;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: rgb(107, 75, 160); 
+        }
     }
 
     .content {
-        font-size: 1.15rem;
-        line-height: 1.5;
-        margin: 0 auto;
+        margin: 0 auto;        
         max-width: 850px;
-        width: 93%;
+        width: 95%;
+
+        ::selection {
+            background: rgb(201, 140, 160);
+        }
+
+        p {
+            margin-bottom: 0.55rem;
+            line-height: 1.5;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
     
         pre {
             font-size: 0.75rem;
@@ -19,34 +50,8 @@
     }
 }
 
-.article time {
-    display: block;
-    margin-bottom: 0.25rem;
-    line-height: 1.1;
-    font-family: 'Coming Soon', cursive;
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: rgb(107, 75, 160); 
-
-    font-weight: 700;
-    line-height: 1.1;
-    display: block;
-    font-size: 1.2em;
-    font-weight: 500;
-}
-
-.article h1 {
-    font-weight: 700;
-    line-height: 1.1;
-    color: #f8f8f8;
-    font-size: 3.25rem;
-    font-weight: 900;
-    margin: 0 auto;
-    max-width: 95%;
-}
-
 @media (min-width: 620px) {
-    .article h1 {
+    .article header h1 {
         font-size: 5.5vw;
     }
 }

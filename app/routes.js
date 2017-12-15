@@ -18,7 +18,7 @@ module.exports = async(router) => {
 
 			await ctx.render("post", { post, title });
         })
-        .get("/pages/:slug", async(ctx, next) => {
+        .get("/pages/:slug", async(ctx) => {
             const page = await pagesData.findPage(ctx.params.slug);
             const title = page.title;
 
