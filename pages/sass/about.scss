@@ -100,20 +100,21 @@ $blue: rgb(27, 105, 242);
 }
 
 .the-site {
-    /*-ms-flex-item-align: center;
-    align-self: center;*/
-    background-color: hsla(0,0%,40%,.1);
-    border: 1px solid hsla(0,0%,40%,.1);
-   /* box-sizing: border-box;
+    -ms-flex-item-align: center;
+    align-self: center;
+    background-color: hsla(0,0%, 40%, 0.1);
+    border: 1px solid hsla(0,0%, 40%, 0.1);
+    box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;*/
+    flex-wrap: wrap;
     margin: 1.2em auto 0;
     padding: 1em 1.2em;
     width: 95%;
 }
+
 /*
 .the-site p {
     color: #d3d3d3;
@@ -145,13 +146,13 @@ This need optimize
         li {
             h4 {
                 color: rgb(94, 234, 139);
-                font-size: 1.35rem;
+                font-size: 1.105rem;
                 padding-bottom: 0.15rem;
             }
 
             p {
                 font-weight: 500;
-                font-size: 1.15rem;
+                font-size: 0.995rem;
                 line-height: 1.5;
             }
         }

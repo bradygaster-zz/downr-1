@@ -30,12 +30,41 @@ slug: about
 			<h3>What I know like the back of my hand</h3>
 			<ul>
 				<li>
-					<h4>HTML & CSS</h4>
+					<h4>HTML</h4>
+					<p>The start of everything. I do Product, web, graphic, UX, UI, and interaction design.</p>
+				</li>
+				<li>
+					<h4>CSS</h4>
 					<p>The start of everything. I do Product, web, graphic, UX, UI, and interaction design.</p>
 				</li>
 				<li>
 					<h4>JavaScript</h4>
-						<p>The start of everything. I do Product, web, graphic, UX, UI, and interaction design.</p>
+					<p>The start of everything. I do Product, web, graphic, UX, UI, and interaction design.</p>
+				</li>
+				<li>
+					<h4>Node.js</h4>
+					<p>The start of everything. I do Product, web, graphic, UX, UI, and interaction design.</p>
+				</li>
+				<li>
+					<h4>C#</h4>
+					<p>The start of everything. I do Product, web, graphic, UX, UI, and interaction design.</p>
+				</li>
+			</ul>
+
+			<h3>What I know enough to get the job done</h3>
+
+			<ul>
+				<li>
+					<h4>C<h4>
+					<p>The start of everything. I do Product, web, graphic, UX, UI, and interaction design.</p>
+				</li>
+				<li>
+					<h4>Python<h4>
+					<p>The start of everything. I do Product, web, graphic, UX, UI, and interaction design.</p>
+				</li>
+				<li>
+					<h4>Go<h4>
+					<p>The start of everything. I do Product, web, graphic, UX, UI, and interaction design.</p>
 				</li>
 			</ul>
 		</div>
