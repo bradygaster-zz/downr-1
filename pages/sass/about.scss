@@ -46,7 +46,7 @@ $blue: rgb(27, 105, 242);
                 content: "";
                 width: 25%;
                 height: 0.35rem;
-                background: rgb(94,234,139);
+                background: $green;
             }
         }
         
@@ -70,7 +70,7 @@ $blue: rgb(27, 105, 242);
     .about-me {
         .all-about-me {
             .number-one {
-               font-size: 1.4em;
+               font-size: 1.45rem;
            }
         }
     }
@@ -79,7 +79,7 @@ $blue: rgb(27, 105, 242);
 @media (min-width: 820px) {
     .about-me {
         .my-big-dumb-faces {
-            background-size: 95%;
+            background-size: 95% 100%;
             background-image: url("/img/man.png");
             padding-top: 0;
             width: 40%;
@@ -88,12 +88,12 @@ $blue: rgb(27, 105, 242);
         .all-about-me {
             padding-right: 4%;
             padding-left: 2%;
-            padding-bottom: 1.2em;
+            padding-bottom: 1.25rem;
             width: 60%;
 
             .number-one {
-                font-size: 1.3em;
-                text-align: left;
+                font-size: 1.75rem;
+                //text-align: left;
             }
         }
     }
@@ -102,8 +102,8 @@ $blue: rgb(27, 105, 242);
 .the-site {
     -ms-flex-item-align: center;
     align-self: center;
-    background-color: hsla(0,0%, 40%, 0.1);
-    border: 1px solid hsla(0,0%, 40%, 0.1);
+    background: hsla(0, 0%, 40%, 0.1);
+    border: 1px solid hsla(0, 0%, 40%, 0.1);
     box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -185,7 +185,7 @@ This need optimize
 
         li {
             h4 {
-                color: rgb(94, 234, 139);
+                color: $green;
                 font-size: 1.105rem;
                 padding-bottom: 0.15rem;
             }
