@@ -1,5 +1,5 @@
 {
-  "name": "bloggable",
+  "name": "downr",
   "version": "1.0.0",
   "description": "Simply async/await node.js web application using koa",
   "main": "server.js",
