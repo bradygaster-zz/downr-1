@@ -11,10 +11,10 @@
             display: block;
             margin-bottom: 0.25rem;
             line-height: 1.1;
-            font-family: 'Coming Soon', cursive;
+            //font-family: 'Coming Soon', cursive;
             font-weight: 700;
             font-size: 0.95rem;
-            color: rgb(107, 75, 160);  
+            color: rgb(66, 218, 67);  
         }
 
         a {
@@ -23,14 +23,14 @@
             font-weight: 700;
             font-size: 2.15rem;
             line-height: 1.1;
-            -webkit-transition: color 0.5s;
-            transition: color 0.5s;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
             word-wrap: break-word;
-            color: rgb(2, 132, 168);
+            color: rgb(36, 112, 231);
         
             &:hover,
             &:focus {
-                color: rgb(2, 190, 196);
+                color: rgb(52, 152, 219);
             }
         }
     }
