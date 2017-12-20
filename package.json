@@ -1,11 +1,10 @@
 {
   "name": "downr",
   "version": "1.0.0",
-  "description": "Simply async/await node.js web application using koa",
+  "description": "dirt-simple markdown blog engine built using node.js",
   "main": "server.js",
   "engines": {
-    "node": "9.1.0",
-    "npm": "5.6.0"
+    "node": "9.3.0"
   },
   "scripts": {
     "postinstall": "node ./sass"
