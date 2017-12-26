@@ -42,8 +42,6 @@ const find = async(slug) => {
                 }
 
                 for (let folder of data) {
-                    console.log(`folder = slug = ${folder}`);
-
                     if (slug === folder) {
                         file = await fileReader.readFile(path.join(POSTS_DIR, folder, "index.md"));
                     }

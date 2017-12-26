@@ -1,21 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-const showdown  = require("showdown");
-const matter = require("gray-matter");
-
-const converter = new showdown.Converter({
-    omitExtraWLInCodeBlocks: true,
-    noHeaderId: true,
-    tables: true
-});
-
 const fileReader = require("./fileReader");
 
 const PAGES_DIR = path.join(__dirname, "..", "pages");
 
 const findPage = async(slug) => {
     return new Promise((resolve, reject) => {
-       // let files = [];
         let file;
 
         try {
@@ -25,22 +15,12 @@ const findPage = async(slug) => {
                 }
 
                 for (let folder of data) {
-                    file = path.join(PAGES_DIR, folder, "index.html");
-
-                    //files.push(await fileReader.readFile(file));
-
-                    if (folder == slug) {
-                        file = await fileReader.readFile(file);
-
-                        resolve(file);
+                    if (slug === folder) {
+                        file = await fileReader.readFile(path.join(PAGES_DIR, folder, "index.html"));
                     }
                 }
                 
-               /* for (let file of files) {
-                    if (file.slug === slug) {
-                        resolve(file);
-                    }
-                }*/
+                resolve(file);
             });
         } catch (err) {
             reject(err);

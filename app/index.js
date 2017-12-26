@@ -17,7 +17,7 @@ module.exports = async(port) => {
         cache: false
     });
 
-    if (process.env.NODE_ENV === "production") {
+    if (app.env === "production") {
         render(app, {
             root: path.join(__dirname, "..", "views"),
             viewExt: "html",
