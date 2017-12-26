@@ -13,30 +13,34 @@ const fileReader = require("./fileReader");
 
 const PAGES_DIR = path.join(__dirname, "..", "pages");
 
-//Todo
 const findPage = async(slug) => {
     return new Promise((resolve, reject) => {
-        let files = [];
+       // let files = [];
         let file;
+
         try {
             fs.readdir(PAGES_DIR, async(err, data) => {
                 if (err) {
                     reject(err);
                 }
 
-                for (let file of data) {
-                    file = path.join(PAGES_DIR, file);
+                for (let folder of data) {
+                    file = path.join(PAGES_DIR, folder, "index.html");
 
-                    if (fs.statSync(file).isFile()) {
-                        files.push(await fileReader.readFile(file));
-                    }
-                }
-                
-                for (let file of files) {
-                    if (file.slug === slug) {
+                    //files.push(await fileReader.readFile(file));
+
+                    if (folder == slug) {
+                        file = await fileReader.readFile(file);
+
                         resolve(file);
                     }
                 }
+                
+               /* for (let file of files) {
+                    if (file.slug === slug) {
+                        resolve(file);
+                    }
+                }*/
             });
         } catch (err) {
             reject(err);
