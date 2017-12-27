@@ -3,7 +3,7 @@ const moment = require("moment");
 const showdown  = require("showdown");
 const matter = require("gray-matter");
 
-const readFile = async(file) => {
+const reader = async(file) => {
     const converter = new showdown.Converter({
         omitExtraWLInCodeBlocks: true,
         noHeaderId: true,
@@ -34,4 +34,4 @@ const readFile = async(file) => {
     });
 };
 
-module.exports.readFile = readFile;
+module.exports = { reader };

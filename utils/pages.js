@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require('path');
-const reader = require("./fileReader");
 
+const { reader } = require("./reader");
 const { PAGES_DIR } = require('../app/constants');
 
 const getPage = async(slug) => {
@@ -15,8 +15,8 @@ const getPage = async(slug) => {
                 }
 
                 for (let folder of data) {
-                    if (slug === folder) {
-                        file = await reader.readFile(path.join(PAGES_DIR, folder, "index.html"));
+                    if (slug.toLowerCase() === folder.toLowerCase()) {
+                        file = await reader(path.join(PAGES_DIR, folder, "index.html"));
                     }
                 }
                 
