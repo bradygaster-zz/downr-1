@@ -1,8 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const fileReader = require("./fileReader");
-
-const POSTS_DIR = path.join(__dirname, "..", "posts");
+const reader = require("./fileReader");
+const { POSTS_DIR } = require('../app/constants');
 
 const allPosts = async() => {
     let file;
@@ -16,7 +15,7 @@ const allPosts = async() => {
                 }
 
                 for (let folder of data) {
-                    file = await fileReader.readFile(path.join(POSTS_DIR, folder, "index.md"));
+                    file = await reader.readFile(path.join(POSTS_DIR, folder, 'index.md'));
 
                     files.push(file);
                 }
@@ -43,7 +42,7 @@ const getPost = async(slug) => {
 
                 for (let folder of data) {
                     if (slug === folder) {
-                        file = await fileReader.readFile(path.join(POSTS_DIR, folder, "index.md"));
+                        file = await reader.readFile(path.join(POSTS_DIR, folder, "index.md"));
                     }
                 }
 
