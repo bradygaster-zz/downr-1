@@ -7,6 +7,7 @@
     "node": "9.3.0"
   },
   "scripts": {
+    "start": "node ./server",
     "postinstall": "node ./sass"
   },
   "author": "Ivan Ivanov",
