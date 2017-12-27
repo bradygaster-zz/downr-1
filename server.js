@@ -3,12 +3,11 @@ const http = require('http');
 const app = require('./app');
 
 const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || '127.0.0.1';
 
-http.createServer(app().callback()).listen(PORT, HOST);
+http.createServer(app().callback()).listen(PORT);
 
 console.log(`You are using ${os.platform()}`);
-console.log(`Application running on http://${HOST}:${PORT}`);
+console.log(`Application running on ${PORT}`);
 
 
 
