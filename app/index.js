@@ -7,7 +7,7 @@ const static = require("koa-static");
 const morgan = require("koa-morgan");
 const bodyParser = require("koa-bodyparser");
 
-module.exports = async(port) => {
+module.exports = () => {
     const app = new Koa();
     const router = new Router();
 
@@ -27,5 +27,7 @@ module.exports = async(port) => {
 
     app.use(static(path.join(__dirname, "..", "public")));
 
-    return new Promise(resolve =>  app.listen(port, resolve));
+    //return new Promise(resolve =>  app.listen(port, resolve));
+
+    return app;
 };
