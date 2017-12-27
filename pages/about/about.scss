@@ -12,11 +12,10 @@ $blue: rgb(27, 105, 242);
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     overflow: hidden;
-    //padding-top: 0.95rem;
     position: relative;
 
     .my-big-dumb-faces {
-        background: transparent url("/img/face.png") no-repeat top;
+        background: transparent url("/img/man.png") no-repeat top;
         background-size: contain;
         box-sizing: border-box;
         padding-top: 66%;
@@ -43,9 +42,9 @@ $blue: rgb(27, 105, 242);
                 display: block;
                 margin: 1.25rem auto;
                 line-height: 1;
-                content: "";
                 width: 25%;
                 height: 0.35rem;
+                content: "";
                 background: $green;
             }
         }
@@ -79,7 +78,7 @@ $blue: rgb(27, 105, 242);
 @media (min-width: 820px) {
     .about-me {
         .my-big-dumb-faces {
-            background-size: 95% 100%;
+            background-size: 95%;
             background-image: url("/img/man.png");
             padding-top: 0;
             width: 40%;
