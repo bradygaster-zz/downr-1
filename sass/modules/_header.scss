@@ -1,7 +1,12 @@
 .header {
     margin: 0 auto;
+    padding: 0.85rem 0;
     position: relative;
     text-align: center;
+    background: transparent url("/img/Header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
     .logo {
         display: block;
@@ -16,18 +21,11 @@
         background-size: contain;
     }
 
-    .logo:before {
-        background-color: #ff3030;
-        content: "";
-        display: block;
-        height: 4px;
-        margin: 0 auto .6em;
-        width: 70%;
-    }
+   
 
     .nav {
        /* margin: 1.25rem auto;*/
-       margin: 0 auto;
+        margin: 0 auto;
         max-width: 750px;
         width: 98%;
         font-size: 1.25rem;
