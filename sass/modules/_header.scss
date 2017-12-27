@@ -1,27 +1,36 @@
 .header {
     margin: 0 auto;
-    padding: 1rem 0;
     position: relative;
     text-align: center;
 
     .logo {
         display: block;
         margin: 0 auto;
-        padding: 1rem 0;
         width: 550px;
         height: 150px;
         max-width: 95%;
+        overflow: hidden;
         background: transparent url("/img/header.svg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
     }
 
+    .logo:before {
+        background-color: #ff3030;
+        content: "";
+        display: block;
+        height: 4px;
+        margin: 0 auto .6em;
+        width: 70%;
+    }
+
     .nav {
-        font-size: 1.25rem;
-        margin: 1.25rem auto;
+       /* margin: 1.25rem auto;*/
+       margin: 0 auto;
         max-width: 750px;
         width: 98%;
+        font-size: 1.25rem;
     
         &:after {
             display: block;

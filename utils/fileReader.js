@@ -3,13 +3,13 @@ const moment = require("moment");
 const showdown  = require("showdown");
 const matter = require("gray-matter");
 
-const converter = new showdown.Converter({
-    omitExtraWLInCodeBlocks: true,
-    noHeaderId: true,
-    tables: true
-});
-
 const readFile = async(file) => {
+    const converter = new showdown.Converter({
+        omitExtraWLInCodeBlocks: true,
+        noHeaderId: true,
+        tables: true
+    });
+
     return new Promise((resolve, reject) => {
         try {
             fs.readFile(file, "utf-8", async(err, file) => {

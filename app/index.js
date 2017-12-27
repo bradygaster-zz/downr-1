@@ -14,16 +14,8 @@ module.exports = async(port) => {
     render(app, {
         root: path.join(__dirname, "..", "views"),
         viewExt: "html",
-        cache: false
+        cache: true
     });
-
-    if (app.env === "production") {
-        render(app, {
-            root: path.join(__dirname, "..", "views"),
-            viewExt: "html",
-            cache: true
-        });
-    }
 
     require("./routes")(router);
     
@@ -36,4 +28,4 @@ module.exports = async(port) => {
     app.use(static(path.join(__dirname, "..", "public")));
 
     return new Promise(resolve =>  app.listen(port, resolve));
-}
+};

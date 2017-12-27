@@ -4,11 +4,11 @@ const fileReader = require("./fileReader");
 
 const POSTS_DIR = path.join(__dirname, "..", "posts");
 
-const all = async() => {
-    return new Promise((resolve, reject) => {
-        let files = [];
-        let file;
+const allPosts = async() => {
+    let file;
+    let files = [];
 
+    return new Promise((resolve, reject) => {
         try {
             fs.readdir(POSTS_DIR, async(err, data) => {
                 if (err) {
@@ -31,10 +31,10 @@ const all = async() => {
    });
 };
 
-const find = async(slug) => {
-    return new Promise((resolve, reject) => {
-        let file;
+const getPost = async(slug) => {
+    let file;
 
+    return new Promise((resolve, reject) => {
         try {
             fs.readdir(POSTS_DIR, async(err, data) => {
                 if (err) {
@@ -55,5 +55,4 @@ const find = async(slug) => {
    });
 };
 
-module.exports.all = all;
-module.exports.find = find;
+module.exports = { allPosts, getPost };

@@ -4,10 +4,10 @@ const fileReader = require("./fileReader");
 
 const PAGES_DIR = path.join(__dirname, "..", "pages");
 
-const findPage = async(slug) => {
+const getPage = async(slug) => {
+    let file;
+    
     return new Promise((resolve, reject) => {
-        let file;
-
         try {
             fs.readdir(PAGES_DIR, async(err, data) => {
                 if (err) {
@@ -28,4 +28,4 @@ const findPage = async(slug) => {
    });
 };
 
-module.exports.findPage = findPage;
+module.exports = { getPage };
