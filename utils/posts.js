@@ -4,9 +4,8 @@ const path = require("path");
 const { reader } = require("./reader");
 const { POSTS_DIR } = require('../app/constants');
 
-const allPosts = async() => {
-    let file;
-    let files = [];
+const allPosts = () => {
+    let posts = [];
 
     return new Promise((resolve, reject) => {
         try {
@@ -15,15 +14,16 @@ const allPosts = async() => {
                     reject(err);
                 }
 
-                for (let folder of data) {
-                    file = await reader(path.join(POSTS_DIR, folder, 'index.md'));
+                for (let post of data) {
+                    post = path.join(POSTS_DIR, post, 'index.md');
+                    post = await reader(post);
 
-                    files.push(file);
+                    posts.push(post);
                 }
-                
-                files.sort((a, b) =>  new Date(b.date) - new Date(a.date));
+                         
+                posts.sort((a, b) =>  new Date(b.date) - new Date(a.date));
 
-                resolve(files);
+                resolve(posts);
             });
         } catch (err) {
             reject(err);
@@ -31,7 +31,7 @@ const allPosts = async() => {
    });
 };
 
-const getPost = async(slug) => {
+const getPost = slug => {
     let file;
 
     return new Promise((resolve, reject) => {

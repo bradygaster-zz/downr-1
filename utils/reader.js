@@ -3,7 +3,7 @@ const moment = require("moment");
 const showdown  = require("showdown");
 const matter = require("gray-matter");
 
-const reader = async(file) => {
+const reader = file => {
     const converter = new showdown.Converter({
         omitExtraWLInCodeBlocks: true,
         noHeaderId: true,
@@ -23,7 +23,7 @@ const reader = async(file) => {
                     title: file.data.title,
                     slug: file.data.slug,
                     date: file.data.date ? moment(file.data.date, "DD-MM-YYYY").format("DD MMMM YYYY") : null,
-                    content: converter.makeHtml(file.content)
+                    content: await converter.makeHtml(file.content)
                 };
 
                 resolve(file);
