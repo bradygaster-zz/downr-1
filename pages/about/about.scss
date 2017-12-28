@@ -50,9 +50,16 @@ $blue: rgb(27, 105, 242);
         }
         
         p:not(.number-one) {
-            font-weight: 700;
+            font-weight: 800;
+            font-size: 1rem;
             color: $groovy;
-            padding-bottom: 1.35rem;
+            padding-bottom: 1.15rem;
+        }
+
+        .programming {
+            margin: 0 auto;
+            color: $black;
+            width: 90%;
         }
     }
 }
@@ -166,11 +173,10 @@ This need optimize
 
 .skills {
     box-sizing: border-box;
-    color: #d3d3d3;
     font-size: 1.2em;
     line-height: 1.5;
     margin: 0 auto;
-    /*width: 93%;*/
+    width: 93%;
 
     h3 {
         color: $blue;
