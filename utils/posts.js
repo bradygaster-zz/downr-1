@@ -15,8 +15,7 @@ const allPosts = () => {
                 }
 
                 for (let post of data) {
-                    post = path.join(POSTS_DIR, post, 'index.md');
-                    post = await reader(post);
+                    post = await reader(path.join(POSTS_DIR, post, 'index.md'));
 
                     posts.push(post);
                 }

@@ -16,8 +16,7 @@ const getPage = slug => {
 
                 for (let page of data) {
                     if (slug.toLowerCase() === page.toLowerCase()) {
-                        file = path.join(PAGES_DIR, page, 'index.html');
-                        file = await reader(file);
+                        file = await reader(path.join(PAGES_DIR, page, 'index.html'));
                     }
                 }
                 
