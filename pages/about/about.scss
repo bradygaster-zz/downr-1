@@ -54,12 +54,13 @@ $blue: rgb(27, 105, 242);
             font-size: 1rem;
             color: $groovy;
             padding-bottom: 1.15rem;
+            text-align: justify;
         }
 
         .programming {
             margin: 0 auto;
-            color: $black;
             width: 90%;
+            color: $black;
         }
     }
 }
@@ -67,7 +68,7 @@ $blue: rgb(27, 105, 242);
 @media (min-width: 570px) {
     .about-me {
         .all-about-me {
-            font-size: 1.4em;
+            font-size: 1.45rem;
         }
     }    
 }
@@ -99,84 +100,16 @@ $blue: rgb(27, 105, 242);
 
             .number-one {
                 font-size: 1.75rem;
-                //text-align: left;
             }
         }
     }
 }
 
-.the-site {
-    -ms-flex-item-align: center;
-    align-self: center;
-    background: hsla(0, 0%, 40%, 0.1);
-    border: 1px solid hsla(0, 0%, 40%, 0.1);
-    box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 1.2em auto 0;
-    padding: 1em 1.2em;
-    width: 95%;
-}
-
-/*
-.the-site p {
-    color: #d3d3d3;
-    padding-bottom: 1.4em;
-}*/
-
-/*
-This need optimize
-*/
-
-.bold-statements {
-    font-weight: 700;
-    line-height: 1.1;
-    font-size: 2.4em;
-    font-weight: 900;
-    margin: 0 auto;
-    padding-top: .6em;
-    text-align: left;
-    text-transform: uppercase;
-    width: 93%;
-}
-
-.bold-statements a {
-    display: inline-block;
-    border-bottom: 0.45rem solid $blue;
-    position: relative;
-    text-decoration: none;
-    -webkit-transition: color 0.25s;
-    transition: color 0.25s;
-}
-
-.bold-statements a:focus,
-.bold-statements a:hover {
-    color: lighten($color: $blue, $amount: 1.5);
-}
-
-@media (min-width: 650px) {
-    .bold-statements {
-        font-size: 4.8vw;
-        text-align: center;
-        width: 100%;
-    }    
-}
-
-@media (min-width: 1100px) {
-    .bold-statements {
-        padding-top: .5em;
-    }
-}
-
 .skills {
-    box-sizing: border-box;
-    font-size: 1.2em;
-    line-height: 1.5;
     margin: 0 auto;
-    width: 93%;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-size: 1.25rem;
 
     h3 {
         color: $blue;
@@ -196,9 +129,10 @@ This need optimize
             }
 
             p {
-                font-weight: 500;
-                font-size: 0.995rem;
+                font-weight: 600 !important;
+                font-size: 1.05rem !important;
                 line-height: 1.5;
+                text-align: left !important;
             }
         }
     }
