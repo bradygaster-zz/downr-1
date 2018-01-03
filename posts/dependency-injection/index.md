@@ -1,5 +1,6 @@
 ---
 title: Dependency Injection
+slug: dependency-injection
 date: 27-01-2017
 ---
 

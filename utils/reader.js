@@ -17,7 +17,7 @@ const reader = file => {
                     reject(err);
                 }
 
-                file = matter(file);
+                file = await matter(file);
 
                 file = {
                     title: file.data.title,
