@@ -3,8 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title><%= title %></title>
+		<title><%= title %> - Ivan Ivanov's blog</title>
+
+		<meta name="description" content="With our thoughtfully clear, concisesual content, and ca, become a better web ninja really quickly!">
+		<meta name="author" content="Ivan Ivanov">
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
@@ -60,13 +64,18 @@
 
 		<footer class="footer">
 			<div class="nav">
+				<a href="/friends">Friends</a>
 				<a href="https://twitter.com/csyntaxdev">Twitter</a>
 				<a href="https://github.com/csyntax">GitHub</a>
-				<br>
 				<a href="mailto:me@csyntax.net">me@csyntax.net</a>
 			</div>
 		</footer>
 
-		<script src="/js/prism.js" async></script>
+		<script src="/js/prism.js"></script>
+		<script src="/js/viewport-units-buggyfill.js"></script>
+
+		<script>
+			window.viewportUnitsBuggyfill.init();
+		</script>
 	</body>
 </html>
