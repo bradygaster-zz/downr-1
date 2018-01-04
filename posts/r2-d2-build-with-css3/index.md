@@ -1,5 +1,6 @@
 ---
 title: R2-D2 направен със CSS3
+slug: r2-d2-build-with-css3
 date: 27-09-2015
 ---
 

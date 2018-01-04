@@ -7,6 +7,8 @@ const static = require("koa-static");
 const morgan = require("koa-morgan");
 const bodyParser = require("koa-bodyparser");
 
+const { POSTS_DIR } = require('./constants')
+
 module.exports = () => {
     const app = new Koa();
     const router = new Router();
@@ -20,14 +22,16 @@ module.exports = () => {
     require("./routes")(router);
     
     app.use(compress());
-    app.use(morgan("combined"));
-    app.use(bodyParser());
+    //app.use(morgan("combined"));
+    //app.use(bodyParser());
     app.use(router.routes());
     app.use(router.allowedMethods());
 
     app.use(static(path.join(__dirname, "..", "public")));
 
-    //return new Promise(resolve =>  app.listen(port, resolve));
+    // TODO
+    console.log(POSTS_DIR)
+    app.use(static(POSTS_DIR));
 
     return app;
 };

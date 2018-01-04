@@ -1,5 +1,6 @@
 ---
 title: Силата на CSS3
+slug: the-power-of-css3
 date: 01-07-2015
 ---
 

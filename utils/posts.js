@@ -40,9 +40,9 @@ const getPost = slug => {
                     reject(err);
                 }
 
-                for (let folder of data) {
-                    if (slug.toLowerCase() === folder.toLowerCase()) {
-                        file = await reader(path.join(POSTS_DIR, folder, "index.md"));
+                for (let post of data) {
+                    if (slug.toLowerCase() === post.toLowerCase()) {
+                        file = await reader(path.join(POSTS_DIR, post, "index.md"));
                     }
                 }
 

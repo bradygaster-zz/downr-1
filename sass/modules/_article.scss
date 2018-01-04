@@ -63,8 +63,8 @@ $black: rgb(30, 30, 29);
     overflow: hidden;
 
     .e-header {
-        box-sizing: border-box;
-        margin: 2.4em 0 2.3em;
+        @include border-box();
+        margin: 2em 0;
         text-align: center;
 
         h1 {
@@ -78,12 +78,12 @@ $black: rgb(30, 30, 29);
         }
 
         time {
+            display: block;
+            padding-top: 0.5em;
             font-weight: 700;
+            font-size: 1em;
             line-height: 1.1;
             color: $blue;
-            display: block;
-            font-size: 1.2em;
-           // font-weight: 500;
         }
     }
 
@@ -112,6 +112,22 @@ $black: rgb(30, 30, 29);
             margin: 0 auto;
             max-width: 790px;
             padding-bottom: 1.4em;
+        }
+
+        figure {
+            margin: .2em 0 1.8em;
+
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
         }
 
         ul {
