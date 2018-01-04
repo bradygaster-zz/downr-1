@@ -1,7 +1,63 @@
-/* Projects */
-
-.projects {
-	background: blue;
+.projects, 
+.projects > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
-/* End*/
+.projects {
+    -ms-flex-item-align: center;
+    align-self: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 1em;
+	max-width: 100%;
+	
+	li {
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		border-bottom: 2px solid transparent;
+		box-sizing: border-box;
+		padding: 2.4em;
+		position: relative;
+		text-align: center;
+		width: 100%;
+
+		div {
+			width: 100%;
+		}
+
+		h2 {
+			font-weight: 800;
+			font-size: 2.45em;
+			line-height: 1.1;
+		}
+
+		.rip {
+			color: #1e1e1d;
+			display: block;
+			font-size: 40%;
+			font-weight: 500;
+		}
+
+		p {
+			font-size: 1.1em;
+			line-height: 1.4;
+			margin: .5em 0 .9em;
+		}
+	}
+}
+
+@media (min-width: 620px) {
+	.projects > li {
+		border-right: 2px solid transparent;
+		width: 50%;
+	}
+}
+
+@media (min-width: 1050px) {
+	.projects > li {
+		width: 33.33%;
+	}
+}
