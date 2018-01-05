@@ -30,7 +30,6 @@ module.exports = () => {
     app.use(static(path.join(__dirname, "..", "public")));
 
     // TODO
-    console.log(POSTS_DIR)
     app.use(static(POSTS_DIR));
 
     return app;

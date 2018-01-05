@@ -1,6 +1,6 @@
 .header {
     margin: 0 auto;
-    padding: 0.85rem 0;
+    padding: 0.5rem 0;
     position: relative;
     text-align: center;
     background: transparent url("/img/Header.png");
@@ -11,31 +11,28 @@
     .logo {
         display: block;
         margin: 0 auto;
-        width: 550px;
+        width: 450px;
         height: 150px;
         max-width: 95%;
         overflow: hidden;
         background: transparent url("/img/header.svg");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 100% 100%;
     }
 
-   
-
     .nav {
-       /* margin: 1.25rem auto;*/
         margin: 0 auto;
         max-width: 750px;
         width: 98%;
-        font-size: 1.25rem;
+        font-size: 1.25em;
     
         &:after {
             display: block;
             margin: 0 auto;
             content: "";
             width: 100%;
-            height: 0.75rem;
+            height: 0.75em;
             background: transparent url("/img/border.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
@@ -54,7 +51,7 @@
                 a {
                     line-height: 1.1;
                     font-weight: 700;
-                    padding: 0.75rem 0.25rem;
+                    padding: 0.75em 0.25em;
                     -webkit-transition: color 0.25s;
                     transition: color 0.25s;
                     color: rgb(42, 117, 255);
@@ -72,7 +69,7 @@
 @media (min-width: 450px) {
     .header {
         .nav {
-            font-size: 1.35rem;
+            font-size: 1.35em;
         }
     }
 }

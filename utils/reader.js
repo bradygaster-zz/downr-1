@@ -22,7 +22,7 @@ const reader = file => {
                 file = {
                     title: file.data.title,
                     slug: file.data.slug,
-                    date: file.data.date ? moment(file.data.date, "DD-MM-YYYY").format("DD MMMM YYYY") : null,
+                    date: file.data.date ? moment(file.data.date, "DD-MM-YYYY").format("D MMMM YYYY") : null,
                     content: await converter.makeHtml(file.content)
                 };
 
