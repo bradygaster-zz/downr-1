@@ -14,7 +14,7 @@ module.exports = () => {
     render(app, {
         root: path.join(__dirname, "..", "views"),
         viewExt: "html",
-        cache: true
+        cache: false
     });
 
     require("./routes")(router);

@@ -77,5 +77,37 @@
 		<script>
 			window.viewportUnitsBuggyfill.init();
 		</script>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			var socket = new io.connect();
+			var footer = document.querySelector('.footer');
+			var text = document.createElement("p");
+			footer.appendChild(text);
+
+			socket.on('message', message);
+			socket.on('reset', reset);
+			socket.on('clear', clearScreen);
+
+			function message(msg) {
+				if (msg.count) {
+					
+					text.innerHTML = 'Current Users: ' + msg.count;
+					
+					console.log(msg.count);
+				}
+			}
+
+			function reset(msg) {
+        		delete last[msg.sessionId];
+			}
+
+			function clearScreen() {
+				delete last['me'];
+				socket.emit('reset');
+			}
+
+			console.log(socket);
+		</script>
 	</body>
 </html>
