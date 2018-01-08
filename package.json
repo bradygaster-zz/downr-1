@@ -7,18 +7,16 @@
     "node": "9.3.0"
   },
   "scripts": {
-    "start": "node ./server",
-    "postinstall": "node ./sass"
+    "start": "node server",
+    "postinstall": "node sass"
   },
   "author": "Ivan Ivanov",
   "license": "MIT",
   "dependencies": {
     "gray-matter": "^3.1.1",
     "koa": "^2.4.1",
-    "koa-bodyparser": "^4.2.0",
     "koa-compress": "^2.0.0",
     "koa-ejs": "^4.1.0",
-    "koa-morgan": "^1.0.1",
     "koa-router": "^7.3.0",
     "koa-static": "^4.0.2",
     "moment": "^2.19.3",

@@ -4,8 +4,6 @@ const render = require("koa-ejs");
 const Router = require("koa-router");
 const compress = require("koa-compress");
 const static = require("koa-static");
-const morgan = require("koa-morgan");
-const bodyParser = require("koa-bodyparser");
 
 const { POSTS_DIR } = require('./constants')
 
@@ -22,8 +20,6 @@ module.exports = () => {
     require("./routes")(router);
     
     app.use(compress());
-    //app.use(morgan("combined"));
-    //app.use(bodyParser());
     app.use(router.routes());
     app.use(router.allowedMethods());
 
