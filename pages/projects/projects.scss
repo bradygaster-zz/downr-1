@@ -48,6 +48,21 @@
 			margin: .5em 0 .9em;
 			font-style: italic;
 		}
+
+		a {
+			font-weight: 700;
+			line-height: 1.1;
+			background-color: white;
+			border: 2px solid white;
+			border-radius: 3px;
+			display: inline-block;
+			font-size: 1.2em;
+			margin-bottom: .2em;
+			padding: .6em .8em;
+			text-decoration: none;
+			-webkit-transition: background-color .15s,color .15s;
+			transition: background-color .15s,color .15s;
+		}
 	}
 }
 
@@ -55,6 +70,10 @@
 	.projects > li {
 		border-right: 2px solid transparent;
 		width: 50%;
+
+		a {
+    		font-size: 1em;
+		}
 	}
 }
 
@@ -64,9 +83,18 @@
 	}
 }
 
-/* projects colors */
 .p-downr {
 	background: rgb(0, 142, 162);
+
+	a {
+		color: rgb(0, 142, 162);
+
+		&:hover,
+		&:focus {
+			color: white;
+			background: rgb(0, 142, 162);
+		}
+	}
 }
 
 .p-2048 {
@@ -75,6 +103,16 @@
 
 .p-mll {
 	background: rgb(255, 119, 0);
+
+	a {
+		color: rgb(255, 119, 0);
+
+		&:hover,
+		&:focus {
+			color: white;
+			background: rgb(255, 119, 0);
+		}
+	}
 }
 
 .p-papersaver {
@@ -83,16 +121,56 @@
 
 .p-obs {
 	background: rgb(172, 22, 3);
+
+	a {
+		color: rgb(172, 22, 3);
+
+		&:hover,
+		&:focus {
+			color: white;
+			background: rgb(172, 22, 3);
+		}
+	}
 }
 
-.p-media-seek-from-url {
+.p-audio-seek-from-url {
 	background: rgb(174, 0, 255);
+
+	a {
+		color: rgb(174, 0, 255);
+
+		&:hover,
+		&:focus {
+			color: white;
+			background: rgb(174, 0, 255);
+		}
+	}
 }
 
 .p-craziness {
 	background: rgb(60, 163, 53);
+
+	a {
+		color: rgb(60, 163, 53);
+
+		&:hover,
+		&:focus {
+			color: white;
+			background: rgb(60, 163, 53);
+		}
+	}
 }
 
 .p-slideshow {
 	background: rgb(221, 99, 100);
+
+	a {
+		color: rgb(221, 99, 100);
+
+		&:hover,
+		&:focus {
+			color: white;
+			background: rgb(221, 99, 100);
+		}
+	}
 }
