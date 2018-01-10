@@ -112,6 +112,10 @@ $black: rgb(30, 30, 29);
             margin: 0 auto;
             max-width: 790px;
             padding-bottom: 1.4em;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
         }
 
         figure {
