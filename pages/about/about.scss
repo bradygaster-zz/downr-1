@@ -57,6 +57,16 @@ $blue: rgb(27, 105, 242);
             text-align: justify;
         }
 
+        .i-care:first-letter {
+            float: left;
+            margin-top: -1.75rem;
+            padding-right: 0.15rem;
+            font-size: 800%;
+            font-weight: 900;
+            line-height: 1.15;
+            color: $blue;
+        }
+
         .programming {
             margin: 0 auto;
             width: 90%;
