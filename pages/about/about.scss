@@ -73,6 +73,58 @@ $blue: rgb(27, 105, 242);
             color: $black;
         }
     }
+
+    .skills {
+        margin: 0 auto;
+        box-sizing: border-box;
+        line-height: 1.5;
+        font-size: 1.25rem;
+    
+        h3 {
+            color: $blue;
+            font-size: 1.75rem;
+            font-weight: 900;
+            padding-bottom: 0.95rem;
+        }
+    
+        ul {
+            list-style: none;
+    
+            li {
+                h4 {
+                    color: $green;
+                    font-size: 1.105rem;
+                    padding-bottom: 0.15rem;
+                }
+    
+                p {
+                    font-weight: 600 !important;
+                    font-size: 0.95rem !important;
+                    line-height: 1.5;
+                    text-align: left !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 555px) {
+    .about-me {
+        .skills ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+
+            li {
+                width: 48%;
+            }
+        }
+    }
 }
 
 @media (min-width: 570px) {
@@ -111,56 +163,6 @@ $blue: rgb(27, 105, 242);
             .number-one {
                 font-size: 1.75rem;
             }
-        }
-    }
-}
-
-.skills {
-    margin: 0 auto;
-    box-sizing: border-box;
-    line-height: 1.5;
-    font-size: 1.25rem;
-
-    h3 {
-        color: $blue;
-        font-size: 1.75rem;
-        font-weight: 900;
-        padding-bottom: 0.95rem;
-    }
-
-    ul {
-        list-style: none;
-
-        li {
-            h4 {
-                color: $green;
-                font-size: 1.105rem;
-                padding-bottom: 0.15rem;
-            }
-
-            p {
-                font-weight: 600 !important;
-                font-size: 1.05rem !important;
-                line-height: 1.5;
-                text-align: left !important;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 555px) {
-    .skills ul {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-
-        li {
-            width: 48%;
         }
     }
 }

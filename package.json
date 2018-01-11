@@ -1,7 +1,7 @@
 {
   "name": "downr",
   "version": "1.0.0",
-  "description": "dirt-simple markdown blog engine built using node.js",
+  "description": "dirt-simple markdown blog engine built using Node.js",
   "main": "server.js",
   "engines": {
     "node": "9.3.0"
